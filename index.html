@@ -11,15 +11,16 @@
             background-color: #f4f4f4;
         }
         header {
-            background: url("Fondo.jpg") center center/cover no-repeat;
+            /* Modificamos el background para que la imagen se ajuste sin recortarse */
+            background: url("Fondo.jpg") center center/contain no-repeat;
             color: black;
-            padding: 50px;
+            padding: 20px; /* Reduje el padding superior e inferior */
             text-align: center;
-            height: auto; /* Ajustamos la altura para que se adapte al contenido */
+            height: 300px; /* Establecemos una altura fija para mostrar la imagen completa */
             display: flex;
             flex-direction: column; /* Alineamos los elementos verticalmente */
-            justify-content: center; /* Centramos verticalmente el contenido */
-            align-items: center; /* Centramos horizontalmente el contenido */
+            justify-content: space-around; /* Distribuimos el espacio entre los elementos */
+            align-items: center; /* Centramos horizontalmente los elementos */
         }
         nav {
             background-color: #444;
@@ -71,7 +72,7 @@
         /* Estilos para el enlace de WhatsApp */
         .whatsapp-link {
             text-align: center; /* Centrar el enlace */
-            margin-top: 20px; /* Espacio superior para separarlo de la imagen */
+            /* Eliminé el margin-top aquí para que esté más cerca de la imagen */
         }
 
         .whatsapp-link a {
@@ -106,13 +107,13 @@
 <body>
 
     <header>
-        <div style="width: 100%; height: 300px; background: url('Fondo.jpg') center center/contain no-repeat;">
-            </div>
+        <div style="width: 100%; height: 250px; /* Ajusté la altura del contenedor de la imagen */
+                    background: url('Fondo.jpg') center center/contain no-repeat;">
+        </div>
         <div class="whatsapp-link">
             <a href="https://wa.me/56950247416" target="_blank">Contáctanos por WhatsApp</a>
         </div>
-        <p style="margin-top: 30px; font-size: 18px;"></p>
-    </header>
+        </header>
 
     <nav>
         <a href="#epp">Protección Personal</a>
